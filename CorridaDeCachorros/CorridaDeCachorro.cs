@@ -6,10 +6,13 @@ namespace CorridaDeCachorros;
 
 public class CorridaDeCachorro
 {
+
+
     private const int NUMERO_MINIMO_DE_APOSTADORES = 5;
     private const int NUMERO_MINIMO_DE_CORREDORES = 4;
 
     public double ValorTotalDeApostas { get; set; } = 0.0;
+    public Guid GUID { get; private set; }
     public List<Apostador> Apostadores { get; set; }
     public List<Corredor> Corredores { get; set; }
 
@@ -20,6 +23,7 @@ public class CorridaDeCachorro
     public Premio PrimeiroPremio { get; set; }
     public Premio SegundoPremio { get; set; }
     public Premio TerceiroPremio { get; set; }
+
 
     public CorridaDeCachorro()
     {
@@ -40,6 +44,7 @@ public class CorridaDeCachorro
 
     private void InicializarObjetos()
     {
+        GUID = Guid.NewGuid();
         Apostadores = new List<Apostador>();
         Corredores = new List<Corredor>();
     }
