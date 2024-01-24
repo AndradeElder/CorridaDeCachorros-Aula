@@ -4,6 +4,9 @@
     ViewData["Title"] = Model.GUID;
 }
 
+<div class =".col-md-4">
+
+    <h1>Corredores</h1>
 
 <table class="table">
     <thead>
@@ -31,30 +34,36 @@
         }
     </tbody>
 </table>
+</div>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Corredores![0].Nome)
-            </th>
-            <th>
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.Corredores!)
-        {
+<div class=".col-md-4">
+
+    <h1>Apostadores</h1>
+
+    <table class="table">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(model => model.Corredores![0].Nome)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.Apostadores![0].Nome)
+                </th>
+                <th>
+                </th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Apostadores!)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(model => model.Apostadores![0].Nome)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
